@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Add this permission for accessing the camera -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:label="ammar_project"
         android:name="${applicationName}"

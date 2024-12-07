@@ -9,7 +9,7 @@ class TicketWidget extends StatelessWidget {
   final String ticketClass;
   final String imgPath; // Path to the image to replace the QR code
 
-  const TicketWidget({
+  const TicketWidget({super.key, 
     required this.passengerName,
     required this.date,
     required this.flightNumber,
@@ -34,7 +34,7 @@ class TicketWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Title
-              Center(
+              const Center(
                 child: Text(
                   'Flight Ticket',
                   style: TextStyle(
@@ -44,48 +44,48 @@ class TicketWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               // Ticket Class and Flight Icon
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.flight,
                     color: Colors.white,
                     size: 20,
                   ),
-                  SizedBox(width: 4),
+                  const SizedBox(width: 4),
                   Text(
                     ticketClass,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 14,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               // Passenger details
               Text(
                 'Passenger: $passengerName',
-                style: TextStyle(color: Colors.white, fontSize: 12),
+                style: const TextStyle(color: Colors.white, fontSize: 12),
               ),
               Text(
                 'Date: $date',
-                style: TextStyle(color: Colors.white, fontSize: 12),
+                style: const TextStyle(color: Colors.white, fontSize: 12),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               // Flight, Gate, and Seat details
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Flight: $flightNumber',
-                    style: TextStyle(color: Colors.white, fontSize: 12),
+                    style: const TextStyle(color: Colors.white, fontSize: 12),
                   ),
                   Text(
                     'Gate: $gate',
-                    style: TextStyle(color: Colors.white, fontSize: 12),
+                    style: const TextStyle(color: Colors.white, fontSize: 12),
                   ),
                 ],
               ),
@@ -94,11 +94,11 @@ class TicketWidget extends StatelessWidget {
                 children: [
                   Text(
                     'Seat: $seat',
-                    style: TextStyle(color: Colors.white, fontSize: 12),
+                    style: const TextStyle(color: Colors.white, fontSize: 12),
                   ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               // Image at the bottom (instead of QR code)
               Center(
                 child: Image.asset(

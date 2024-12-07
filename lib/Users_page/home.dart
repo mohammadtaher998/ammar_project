@@ -1,4 +1,5 @@
-import 'package:ammar_project/Users_page/profile_page.dart';
+import 'package:ammar_project/Users_page/QRCode.dart';
+import 'package:ammar_project/Users_page/ActivityPage.dart';
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 
@@ -15,8 +16,8 @@ class _HomeState extends State<Home> {
   // List of pages for bottom navigation
   final List<Widget> _pages = [
     home_page(),
-    ActivityCardsForUsersn()
-
+    ActivityCardsForUsersn(),
+QRCodeScannerPage(),
   ];
 
   // Function to handle tab selection
@@ -35,11 +36,11 @@ class _HomeState extends State<Home> {
         onTap: _onItemTapped,
           selectedItemColor: Colors.red,  // Color when selected
         unselectedItemColor: Colors.black,  // Color when unselected
-         selectedLabelStyle: TextStyle(
+         selectedLabelStyle: const TextStyle(
           color: Colors.red,  // Font color when selected
           fontWeight: FontWeight.bold,  // Optional: Make the selected label bold
         ),
-        unselectedLabelStyle: TextStyle(
+        unselectedLabelStyle: const TextStyle(
           color: Colors.black,  // Font color when unselected
           
         ),
@@ -50,17 +51,14 @@ class _HomeState extends State<Home> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.search),
+            label: 'ِActivity',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Notifications',
+            icon: Icon(Icons.bookmark_add_outlined),
+            label: 'Booking',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
+        
         ],
       ),
     );
